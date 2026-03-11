@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "build:dev": "webpack --mode development",
-    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development && node -e \"require('fs').cpSync('public', 'dist/public', {recursive: true})\"",
+    "build": "webpack --mode production && node -e \"require('fs').cpSync('public', 'dist/public', {recursive: true})\"",
     "watch": "webpack --mode development --watch --progress",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,css,scss,html,vue}\"",
     "lint": "eslint",
