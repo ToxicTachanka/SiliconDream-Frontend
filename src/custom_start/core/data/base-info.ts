@@ -58,19 +58,19 @@ export const generateInitialPoints = (characterName?: string): number => {
   const weight = 3;
   const weightRandom = Math.pow(random, weight);
 
-  const result = Math.floor(1000 + weightRandom * (10000 - 1000 + 1));
+  const result = Math.floor(10000 + weightRandom * (50000 - 10000 + 1));
 
-  return Math.min(result, 10000);
+  return Math.min(result, 50000);
 };
 
 // 初始转生点数（默认值）
-export const INITIAL_REINCARNATION_POINTS = 1000;
+export const INITIAL_REINCARNATION_POINTS = 10000;
 
 // 属性列表
 export const ATTRIBUTES: (keyof Attributes)[] = ['力量', '敏捷', '体质', '智力', '精神'];
 
 // 等级相关常量
-export const MAX_LEVEL = 10;
+export const MAX_LEVEL = 25;
 export const MIN_LEVEL = 1;
 
 // 基础属性值
@@ -82,7 +82,7 @@ export const BASE_STAT = 4;
  * @returns 可自由分配的AP点数
  */
 export const calculateAPByLevel = (level: number): number => {
-  const baseAP = 5;
+  const baseAP = 10;
 
   // 额外属性点 = 等级 - 1
   const extraAP = Math.max(0, level - 1);
