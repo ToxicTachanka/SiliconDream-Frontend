@@ -44,7 +44,7 @@ const checkDevModeByName = (name: string): boolean => {
 
 /**
  * 生成随机初始转生点数
- * 范围: 1000-10000
+ * 范围: 10000-50000
  * 更好的加权随机
  * @param characterName 可选的角色名，用于检测开发者模式
  */
